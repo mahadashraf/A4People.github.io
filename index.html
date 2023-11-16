@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A4People</title>
+    <!-- Linking external CSS and JavaScript files -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <!-- Internal styles can be placed here if needed -->
+    <style>
+        /* Add any additional styles if necessary */
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <nav>
+        <h1>
+            <a href="index.html">
+                <span>A4People</span>
+            </a>
+        </h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            
+        </ul>
+        <a href="contact.html" class="button">Contact</a>
+    </nav>
+
+    <!-- Hero Header Section -->
+    <div class="hero-header">
+        <div class="header-content">
+            <h2>A4People <br>Helping to build <br> your bigger picture</h2>
+            <p>Empowering Your Workforce, Igniting Success: A4People - Where HR Excellence Meets Business Brilliance.</p>
+            <br>
+            <br>
+            <a href="#" class="btn btn-secondary">Read More</a>
+            <a href="contact.html" class="btn btn-light">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Particle Animation Canvas -->
+    <canvas id="canvas"></canvas>
+
+    <!-- Inline script for triggering the fade-in animation -->
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            // Triggering the fade-in animation for the h2 element
+            document.querySelector('h2').style.opacity = 1;
+        });
+    </script>
+</body>
+
+</html>

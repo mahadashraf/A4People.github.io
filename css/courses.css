@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  
+}
+
+/* Color variables */
+:root {
+    --black: #171321;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+
+/* Box model */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Body styling */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--mono);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+    background-color: transparent;
+}
+
+/* Navigation styling */
+nav {
+    font-size: 80%;
+    padding: 4rem 1rem;
+    position: relative; /* Add this line */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--magenta);
+}
+
+nav li a:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 23, 228, 1) 0%, rgba(134, 251, 251, 1) 100%);
+}
+
+/* Media query for larger screens */
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
+
+/* Canvas styling */
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Button styling */
+.button {
+    background-color: rgb(135, 145, 236); /* Green */
+    border: none;
+    border-radius: 40px;
+    color: rgb(255, 253, 253);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+  }
+  
+.button:hover {
+  color: rgb(255, 246, 246); 
+  border: 2px solid #f44336;
+    opacity: 1;
+    transform: scale(1.1); /* Increase the size on hover */
+}
+
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0px 8%;
+}
+
+.container h1 {
+  text-align: center;
+  padding-top: 10%;
+  margin-bottom: 60px;
+  font-weight: 600;
+  position: relative;
+  color: #171321;
+  font-family: 'Poppins', sans-serif;
+  margin-top: -40px;
+}
+.container h2 {
+  
+  font-weight: 600;
+    color: #171321;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container p {
+  
+  color: #171321;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container h1::after {
+  content: '';
+  background: #303ef7;
+  width: 100px;
+  height: 5px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.service {
+  text-align: center;
+  padding: 25px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 0.5s, background 0.5s;
+}
+
+.service i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #303ef7;
+}
+
+.service h2 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.service:hover {
+  background: #303ef7;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.service:hover i {
+  color: #fff;
+}

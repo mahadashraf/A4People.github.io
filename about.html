@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About A4People</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+
+    <nav>
+        <h1>
+            <a href="index.html">
+                <span>A4People</span>
+            </a>
+        </h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+        <a href="#read-more" class="btn">Contact</a>
+    </nav>
+
+    <main class="main-grid">
+        <div class="head">
+            <h1 class="page-title">About us</h1>
+        </div>
+    </main>
+    <!-- Hero Header Section -->
+    <div class="hero-header" id="read-more">
+        <div class="header-content">
+            <h2>A4People <br>Helping to build <br> your bigger picture</h2>
+            <p>A4People was created from a desire to help small to medium-sized businesses (SME’s) gain access to HR advice and support at a fraction of the cost of employing a full-time member of staff and to find practical, legally compliant solutions to grow their business and engage employees.
+            </p>
+        </div>
+        <img src="img/logo.png" alt="logo" width="300">
+    </div>
+
+    <!-- Read More Section -->
+    <div class="read-more">
+        <p>Read more about our mission and values</p>
+        <a href="#full-text" >Read More</a>
+    </div>
+
+    <!-- Full Text Section -->
+    <div id="full-text" style="display: none;">
+        <p>A4People was created from a desire to help small to medium sized businesses (SME’s) gain access to HR advice and support at a fraction of the cost of employing a full-time member of staff and to find practical, legally compliant solutions to grow their business and engage employees.  
+ 
+            We can help you cut costs, improve efficiency and allow you to focus on the bigger picture by providing bespoke hands on pragmatic advice to help tackle the daily challenges of employment law, employing, developing, retaining and when the need arises, exiting people.  Here's some of the ways we can help.
+            Developing HR and people management policies to keep your company in line with current legislation
+            Recruitment advice – best practice for interviewing and selection
+            Advice and support on disciplinary and grievance handling
+            MBTI – Personality Profiling
+            Training for managers in practical Employment Law
+            Talent Management – succession planning
+            Performance management – development of and training of policy
+            
+            Offering personalised and client-focused solutions to ease the pressures of staff management, leaving you free to grow, with confidence and reassurance your HR operations are legal, appropriate and effective.
+            
+            ​Together, we can help you grow!
+            Picture
+            With a background that combines over 25 years of experience in HR, Training, Learning and Development, Karen has a wealth of HR skills and knowledge providing a varied and detailed portfolio of services. She works with clients in a multitude of industry sectors ranging in size. Her pragmatic approach to dealing with employee matters has helped clients deal with everything from policy development, redundancy, disciplinary and grievance situations to running learning needs analysis to programme development and delivery including the ever popular MBTI assessment to name but a few. 
+            
+            With an interest in supporting organisations committed to developing a culture of fair treatment, inclusion, respect for individuals and who are passionate about employee continuous learning and development, Karen offers a joined up best practice strategic approach to helping clients manage their people. A member of the Chartered Institute of Personnel and Development (CIPD) for over 20 years, she gets excited about providing complete HR solutions that can be deployed in real life with common sense, practically and simply. </p>
+        <!-- Include the rest of the text here -->
+        <!-- ... -->
+    </div>
+
+    <!-- Particle Animation Canvas -->
+    <canvas id="canvas"></canvas>
+
+   
+
+    <script>
+        // JavaScript to toggle visibility of full text
+        document.querySelector('.read-more a').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('full-text').style.display = 'block';
+            // Scroll to the full-text section
+            document.getElementById('full-text').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+
+</html>

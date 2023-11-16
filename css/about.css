@@ -1,0 +1,272 @@
+ /* Reset and global styling */
+ body {
+    margin: 0;
+    font-family: "Oxygen mono", monospace;
+    font-size: 1.3rem;
+}
+
+/* Color variables */
+:root {
+    --black: #171321;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+
+/* Box model */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Body styling */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--mono);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+    background-color: transparent;
+}
+
+/* Navigation styling */
+nav {
+    font-size: 80%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+
+nav a {
+    color: rgb(19, 5, 5);
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--magenta);
+}
+
+nav li a:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 23, 228, 1) 0%, rgba(134, 251, 251, 1) 100%);
+}
+
+/* Media query for larger screens */
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+    }
+}
+
+/* Button styling */
+.btn {
+    background-color: rgb(135, 145, 236); /* Green */
+    border: none;
+    border-radius: 40px;
+    color: rgb(255, 253, 253);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: rgb(255, 246, 246);
+    opacity: 1;
+    transform: scale(1.1); /* Increase the size on hover */
+}
+
+main {
+    background-color: #fff;
+    color: #000;
+    grid-column: 2 / -2;
+    margin-top: -40px;
+}
+
+.head {
+    grid-column: 2 / -2;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.page-title {
+    color: #000;
+    font-size: 2.5rem;
+    justify-self: center;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin-top: 1em;
+    background: #fda039;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 700px) {
+    .page-title::after {
+        content: '';
+        display: block;
+        width: 160px;
+        height: 5px;
+        background: #fda039;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 10px;
+    }
+}
+
+/* Heading 2 styling */
+h2 {
+    margin: 0;
+    font-family: "Oxygen", sans-serif;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Animation properties */
+    color: #171321;
+    margin-top: -150px;
+}
+
+p {
+    color: #171321;
+    font-size: 19px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+/* Hero Header content styling */
+.hero-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+.header-content {
+    max-width: 600px; /* Adjust the width as needed */
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    margin-top: 140px;
+}
+
+.hero-header img {
+    max-width: 100%; /* Make sure the image doesn't exceed its container */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+/* Read More section */
+.read-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.read-more a {
+    text-decoration: none;
+    color: #86fbfb; /* Aqua color */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.read-more a:hover {
+    color: #ff17e4; /* Hot magenta color */
+}
+
+/* Canvas styling */
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* Read More section styling */
+.read-more {
+text-align: center;
+margin-top: -30px;
+
+}
+
+.read-more a {
+text-decoration: none;
+color: #0c1313; /* Aqua color */
+font-weight: bold;
+font-size: 18px;
+transition: color 0.3s;
+cursor: pointer;
+border: 2px solid #86fbfb; /* Aqua color */
+padding: 10px;
+border-radius: 40px;
+
+}
+
+.read-more a:hover {
+color: #ff17e4; /* Hot magenta color */
+}
